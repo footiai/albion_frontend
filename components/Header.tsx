@@ -46,8 +46,8 @@ const Header = () => {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-primary-100/90 backdrop-blur-custom shadow-soft'
-            : 'bg-transparent'
+            ? 'bg-gradient-to-b from-gray-800/90 to-gray-900/80 backdrop-blur-custom shadow-soft'
+            : 'bg-gradient-to-b from-gray-800/70 to-transparent'
         }`}
       >
         <div className="container-custom">
@@ -80,7 +80,7 @@ const Header = () => {
                   onClick={() => scrollToSection(item.href)}
                   className={`relative font-medium transition-all duration-300 group px-4 py-2 rounded-lg ${
                     isScrolled 
-                      ? 'text-text-primary hover:text-primary-600 hover:bg-primary-200' 
+                      ? 'text-white hover:text-white hover:bg-white/20' 
                       : 'text-white hover:bg-white/20 hover:text-white'
                   }`}
                 >
@@ -115,7 +115,7 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`lg:hidden p-2 rounded-lg transition-colors duration-300 ${
                 isScrolled
-                  ? 'text-text-primary hover:bg-primary-100'
+                  ? 'text-white hover:bg-white/20'
                   : 'text-white hover:bg-white/20'
               }`}
             >
